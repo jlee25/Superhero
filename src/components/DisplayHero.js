@@ -54,10 +54,7 @@ class DisplayHero extends Component {
 
   renderSuperhero(selectedHero) {
     const { superheroes } = this.props;
-    const exacthero = new RegExp("^" + selectedHero + "$", "g");
-    const hero = superheroes
-      .filter(superhero => superhero.name.toLowerCase().match(exacthero));
-    console.log(hero)
+    const exacthero = new RegExp("^" + selectedHero + "$", "i");
     if (!selectedHero) {
       return null;
     } else {
