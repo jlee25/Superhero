@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+img {
+  max-width: 100%;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../assets/deadpool.jpg) bottom no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  max-width: 1200px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 0;
+  text-shadow: 2px 2px 3px white;
+  font-family: 'Bangers';
+}
+
+.speechText {
+  position: relative;
+  max-width: 700px;
+  border: 5px solid black;
+  border-radius: 3rem;
+  background: #fafff9;
+  letter-spacing: 1.2px;
+  word-spacing: 1.3px;
+  padding: 1rem;
+  font-family: 'Bangers';
+  font-size: 20px;
+  padding: 40px;
+}
+
+.speechText:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 92%;
+    width: 0;
+    height: 0;
+    border: 33px solid transparent;
+    border-top-color: black;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -5.5px;
+    margin-bottom: -33px;
+}
+
+.heroForm {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.heroInputs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.heroInputs input {
+  padding: 15px;
+  margin: 0 10px;
+  width: 45%;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: black solid 2px;
+  margin: 1rem 0;
+  box-shadow: 5px 5px 5px gray;
+}
+
+.submit button {
+  width: 40%;
+  padding: 15px;
+  margin: 0 10px;
+  width: 45%;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: white solid 2px;
+  margin: 1rem 0;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px gray;
+  background-color: black;
+  color: white;
+  font-family: 'Bangers';
+}
+
+.submit button:hover {
+  background-color: tomato;
+  cursor: pointer;  
+}
+
+a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  color: black;
+  font-size: 20px;
+  font-family: 'Bangers';
+}
+
+a:hover {
+  color: tomato;
+}
+
+@media (max-width: 850px) {
+  .heroInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .speechText {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    background: url(../assets/deadpool-responsive.jpg) no-repeat right;
+    background-size: cover;
+  }
+  .speechText {
+    display: none;
+  }
+  .wrapper {
+    width: 80%;
+  }
+  .heroInputs input {
+    width: 80%;
+  }
+  .searchHero {
+    width: 100%;
+  }
+}
+
