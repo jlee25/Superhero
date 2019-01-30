@@ -55,9 +55,17 @@ class DisplayHero extends Component {
   renderSuperhero(selectedHero) {
     const { superheroes } = this.props;
     const exacthero = new RegExp("^" + selectedHero + "$", "i");
+    console.log(superheroes)
+    const noHeroFound = superheroes
+        .filter(superhero => superhero.name.toLowerCase().match(exacthero))
+      .map((superhero, index) => { return superhero.name })
     if (!selectedHero) {
       return null;
-    } else {
+    } else if (noHeroFound[0] === undefined ) {
+      return <div className="errorContainer">
+        <h1 className="error">There is no superhero or villain under that name. Please try again!</h1>
+      </div> } 
+      else {
       return superheroes
         .filter(superhero => superhero.name.toLowerCase().match(exacthero))
         .map((superhero, index) => {
